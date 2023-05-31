@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 7, 39);
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+    .cont{
+        height: 500px;
+        width: 1000px;
+        background-color: rgb(20, 0, 43);
+        display: flex;
+        .cont__pt{
+            width: 50%;
+            height: 100%;
+            .pt__text{
+                margin-top: 10px;
+                text-align: center;
+                color: white;
+                h1{
+                    font-size: 2.8125rem;
+                    margin-bottom: 30px;
+                }
+                span{
+                    color: rgb(190, 50, 255);
+                }
+                p{
+                    color: rgb(223, 220, 220);
+                    font-size: 20px;
+                }
+            }
+            .pt__dat{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 200px;
+                p{
+                    font-size: 30px;
+                    color: white;
+                }
+                b{
+                    color: gray;
+                    font-size: 20px;
+                }
+            }
+        }
+        .cont__pt2{
+            width: 50%;
+            height: 100%;
+            .pt2__img{
+                width: 100%;
+                height: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+
+@media screen and (max-width:700px) {
+    body{
+        height: auto;
+        .cont{
+            height: auto;
+            width: 100%;
+            margin: 50px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 25px;
+            .cont__pt{
+                width: 90%;
+                order: 2;
+                .pt__dat{
+                    flex-wrap: wrap;
+                    margin-top: 10px;
+                    gap: 20px;
+                }
+            }
+            .cont__pt2{
+                width: 100%;
+                height: 100%;
+                order: 1;
+                .pt2__img{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        border-top-right-radius: 25px;
+                        border-top-left-radius: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
